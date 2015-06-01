@@ -18,3 +18,16 @@
 #-keepclassmembers class fqcn.of.javascript.interface.for.webview {
 #   public *;
 #}
+
+-dontwarn android.webkit.**
+-keep class com.adop.sdk.** {*;}
+
+-dontwarn android.support.**,com.google.android.gms.**
+-keep class kr.co.dnasoft.remonsdk.** {*;}
+
+-keep public class com.fsn.cauly.** {
+	public protected *;
+}
+-keep public class com.trid.tridad.** {
+	public protected *;
+}

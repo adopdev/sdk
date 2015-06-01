@@ -5,6 +5,7 @@ import com.adop.sdk.BaseAdView;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.widget.RelativeLayout;
 
 public class BannerActivity extends Activity {
@@ -18,8 +19,9 @@ public class BannerActivity extends Activity {
         mAdView = new BaseAdView(this); // BaseAdView 생성
         AdEntry aEntry = new AdEntry("342"); // 발급받은 ZoneID 입력
         mAdView.setAdInfo(aEntry, this); // AdEntry, Activity
+        mAdView.setInterval(60); // 초 단위 기재.
         mAdView.load(); // Load 광고실행
-        
+        mAdView.setGravity(Gravity.CENTER);
         RelativeLayout layout = (RelativeLayout) findViewById(R.id.mainLayout);
         RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(
                 RelativeLayout.LayoutParams.MATCH_PARENT, RelativeLayout.LayoutParams.WRAP_CONTENT);

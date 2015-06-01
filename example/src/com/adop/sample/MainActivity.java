@@ -35,7 +35,6 @@ public class MainActivity extends ListActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        Resources res = getResources();
         Sample[] samples = {
             new Sample("BannerAdActivity", BannerActivity.class),
             new Sample("InstitialAdActivity", InterstitialActivity.class),

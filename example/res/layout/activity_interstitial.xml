@@ -21,11 +21,22 @@
     android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent">
-
+    <Button
+        android:id="@+id/loadButton"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Load Interstitial"
+        android:onClick="loadInterstitial"/>
     <Button
         android:id="@+id/showButton"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="Show Interstitial"
+        android:text="Interstitial Not Ready"
         android:onClick="showInterstitial"/>
+    <Button
+        android:id="@+id/DirectShowButton"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Direct Show"
+        android:onClick="DirectInterstitial"/>
 </LinearLayout>

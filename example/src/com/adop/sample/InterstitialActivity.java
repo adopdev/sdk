@@ -28,11 +28,15 @@ public class InterstitialActivity extends Activity {
 			@Override
 			public void onSuccesAd() {
 				// 광고 Load 성공
+				mShowButton.setText("Show Interstitial");
+                mShowButton.setEnabled(true);
 			}
 			
 			@Override
 			public void onFailedAd() {
 				// 광고 Load 실패
+				mShowButton.setText("Ad Failed to Load");
+                mShowButton.setEnabled(false);
 			}
 			
 			@Override
@@ -41,11 +45,28 @@ public class InterstitialActivity extends Activity {
 			}
 		});
         
+        
         mShowButton = (Button) findViewById(R.id.showButton);
-        mShowButton.setEnabled(true);
+        mShowButton.setEnabled(false);
+        
+    }
+    
+    public void loadInterstitial(View unusedView) {
+    	mShowButton.setText("Loading Interstitial...");
+        mShowButton.setEnabled(false);
+    	mInterstitial.load();
     }
 
     public void showInterstitial(View unusedView) {
-    	mInterstitial.load(); // 광고셋팅이 완료 된 후 Load 실행.
+    	if (mInterstitial.isLoaded()) {
+            mInterstitial.show();
+        }
+
+        mShowButton.setText("Interstitial Not Ready");
+        mShowButton.setEnabled(false);
+    }
+    
+    public void DirectInterstitial(View unusedView) {
+    	mInterstitial.start();
     }
 }
