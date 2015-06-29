@@ -8,6 +8,8 @@ import android.widget.Button;
 import com.adop.sdk.AdEntry;
 import com.adop.sdk.BaseInterstitial;
 import com.adop.sdk.OptimaAdListener;
+import com.inmobi.commons.InMobi;
+import com.inmobi.commons.InMobi.LOG_LEVEL;
 
 public class InterstitialActivity extends Activity {
     private BaseInterstitial mInterstitial;
@@ -23,7 +25,7 @@ public class InterstitialActivity extends Activity {
         mInterstitial.setAdInfo(info, InterstitialActivity.this); // AdEntry 및 Activity
         
         // OptimaAd Listener 설정
-        mInterstitial.setOptimaAdListener(new OptimaAdListener() {
+        mInterstitial.setOptimaAdListener(new OptimaAdListener() { 
 			
 			@Override
 			public void onSuccesAd() {
@@ -52,6 +54,7 @@ public class InterstitialActivity extends Activity {
     }
     
     public void loadInterstitial(View unusedView) {
+    	InMobi.setLogLevel(LOG_LEVEL.DEBUG);
     	mShowButton.setText("Loading Interstitial...");
         mShowButton.setEnabled(false);
     	mInterstitial.load();

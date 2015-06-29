@@ -1,5 +1,8 @@
 package com.adop.sample;
 
+import com.inmobi.commons.InMobi;
+import com.inmobi.commons.InMobi.LOG_LEVEL;
+
 import android.app.Activity;
 import android.app.ListActivity;
 import android.content.Intent;
@@ -41,7 +44,7 @@ public class MainActivity extends ListActivity {
             new Sample("CloseAdActivity", CloseAdActivity.class),
         };
         setListAdapter(new ArrayAdapter<Sample>(this, android.R.layout.simple_list_item_1, samples));
-        
+     
     }
 
     @Override

@@ -31,3 +31,11 @@
 -keep public class com.trid.tridad.** {
 	public protected *;
 }
+
+-keep class com.tnkfactory.** { *;}
+
+-keep class com.inmobi.** { *; }
+-dontwarn com.inmobi.**
+
+-keep class com.skplanet.tad.** { *; }
+-dontwarn android.webkit.JavascriptInterface
