@@ -24,6 +24,10 @@ public class InterstitialActivity extends Activity {
         AdEntry info = new AdEntry("357"); // 발급받은 ZoneID 입력
         mInterstitial.setAdInfo(info, InterstitialActivity.this); // AdEntry 및 Activity
         
+        mInterstitial.setAge(27); // 숫자로 기입.
+        mInterstitial.setGender(AdEntry.MALE); // 남자(MALE), 여자(FEMALE)로 구분. 모를땐 미사용.
+        mInterstitial.setKeyword("sports,game"); // 키워드 ,(콤마)로 여러개 입력 가능.
+        
         // OptimaAd Listener 설정
         mInterstitial.setOptimaAdListener(new OptimaAdListener() { 
 			

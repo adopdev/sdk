@@ -27,6 +27,11 @@ public class CloseAdActivity extends Activity {
     	BaseRectAdView closead = new BaseRectAdView(this); // BaseRectAdView 생성
     	AdEntry info = new AdEntry("399"); // 발급받은 ZoneID 입력
     	closead.setAdInfo(info, this); // AdEntry 및 Activity
+    	
+    	closead.setAge(27); // 숫자로 기입.
+    	closead.setGender(AdEntry.MALE); // 남자(MALE), 여자(FEMALE)로 구분. 모를땐 미사용.
+    	closead.setKeyword("sports,game"); // 키워드 ,(콤마)로 여러개 입력 가능.
+    	
     	closead.load();
     	
     	alertClose(closead);
