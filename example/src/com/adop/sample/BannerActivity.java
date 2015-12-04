@@ -20,6 +20,11 @@ public class BannerActivity extends Activity {
         AdEntry aEntry = new AdEntry("342"); // 발급받은 ZoneID 입력
         mAdView.setAdInfo(aEntry, this); // AdEntry, Activity
         
+//        mAdView.setHouseAd(true); // 하우스배너 사용 설정
+//        mAdView.setHouseAdURL("http://"); // 하우스배너 사용시 원하는 ImageURL 설정. 미설정시 ADOP HouseAd Image 노출
+//        mAdView.setRefresh(false); // 광고 리프레쉬 기능 on/off 설정
+//        mAdView.setFillRate(false); // 광고 FillRate 기능 on/off 설정
+        
         mAdView.setAge(27); // 숫자로 기입.
         mAdView.setGender(AdEntry.MALE); // 남자(MALE), 여자(FEMALE)로 구분. 모를땐 미사용.
         mAdView.setKeyword("sports,game"); // 키워드 ,(콤마)로 여러개 입력 가능.
